@@ -1,0 +1,42 @@
+\documentclass[10pt,a4paper,xcolor=dvipsnames]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+
+\tikzset{every tree node/.style={minimum width=2em,draw,circle},
+         blank/.style={draw=none},
+         edge from parent/.style=
+         {draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+         level distance=1.5cm}
+
+\begin{document}
+
+	\begin{tikzpicture}
+	\Tree
+	[.Start     
+		[.1
+	    \edge[blank]; \node[blank]{};
+			[.2 \edge[];{3} ]
+	    \edge[blank]; \node[blank]{};
+			[.3 \edge[];{2} ]
+	    \edge[blank]; \node[blank]{};
+		]
+		[.2 
+	    \edge[blank]; \node[blank]{};
+			[.1 \edge[];{3} ]
+	    \edge[blank]; \node[blank]{};
+			[.3 \edge[];{1} ]
+	    \edge[blank]; \node[blank]{};
+		]
+		[.3 
+	    \edge[blank]; \node[blank]{};
+			[.1 \edge[];{2} ]
+	    \edge[blank]; \node[blank]{};
+			[.2 \edge[];{1} ]
+	    \edge[blank]; \node[blank]{};
+		]
+	]
+	\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[10pt,a4paper,xcolor=dvipsnames]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault}
+\usepackage{libertinust1math}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+
+% COLORS
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\lstset{language=Java,
+  captionpos=b,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  tabsize=3,
+  numbers=left,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pgrey},
+  identifierstyle=\color{pred},
+  basicstyle=\ttfamily,
+  frame=single,
+  moredelim=[il][\textcolor{pgrey}]{$$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
+\begin{document}
+	\lstinputlisting[name=Hello World FX (HelloWorld.java), caption=\lstname, language=Java]{src/sourceCode/HelloWorld.java}
+\end{document}
